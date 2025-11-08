@@ -1,18 +1,15 @@
 {
-  "name": "electron-react-starter",
-  "version": "1.0.0",
+  "name": "electron-starter-template",
   "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "main": "./src/main/index.ts",
+  "type": "module",
+  "author": "",
+  "license": "",
   "scripts": {
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "preview": "electron-vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.20.0",
-  "devDependencies": {
-    "electron-vite": "^4.0.1"
-  }
+  "private": true
 }
