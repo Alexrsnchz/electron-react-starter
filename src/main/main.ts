@@ -10,7 +10,7 @@ function createWindow() {
         width: 1024,
         height: 675,
         webPreferences: {
-            preload: path.join(__dirname,'../preload/index.mjs'),
+            preload: path.join(__dirname,'../preload/preload.mjs'),
             sandbox: false,
             contextIsolation: true,
             nodeIntegration: false,
