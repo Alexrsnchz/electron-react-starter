@@ -8,7 +8,7 @@ export default defineConfig({
       outDir: 'dist/main',
       rollupOptions: {
         input: {
-          index: resolve(__dirname, 'src/main/main.ts')
+          main: resolve(__dirname, 'src/main/main.ts')
         }
       },
     },
@@ -19,7 +19,7 @@ export default defineConfig({
       outDir: 'dist/preload',
       rollupOptions: {
         input: {
-          index: resolve(__dirname, 'src/preload/preload.ts')
+          preload: resolve(__dirname, 'src/preload/preload.ts')
         }
       }
     },
