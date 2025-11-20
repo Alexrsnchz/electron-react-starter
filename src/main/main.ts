@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, shell } from 'electron';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,6 +22,11 @@ function createWindow() {
     } else {
         win.loadFile(path.join(__dirname, '../renderer/index.html')).catch(console.error);
     }
+
+    win.webContents.setWindowOpenHandler((details) => {
+        shell.openExternal(details.url).catch(console.error);
+        return { action: "deny" };
+    });
 }
 
 app.whenReady().then(() => {
