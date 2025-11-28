@@ -9,7 +9,9 @@
   "scripts": {
     "dev": "electron-vite dev --inspect --watch",
     "build": "electron-vite build",
-    "preview": "electron-vite preview"
+    "preview": "electron-vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "private": true
 }
